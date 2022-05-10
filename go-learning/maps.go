@@ -15,9 +15,12 @@ func main() {
 	for i := 1; i <= 10; i++ {
 		var keyName string
 		keyName = fmt.Sprint("k", i)
-		fmt.Println(keyName)
 		myMap[keyName] = i
 	}
 	fmt.Println(myMap)
+	delete(myMap, "k5")
+	fmt.Println(myMap)
+	oneItem, _ := myMap["k4"]
+	fmt.Println(oneItem)
 
 }
